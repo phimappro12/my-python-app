@@ -1,0 +1,62 @@
+{
+    "xưởng dệt": {
+        "__SHEET_ZONE_MAP__": {
+            "wea 1": "Weaving 1",
+            "wea 2": "Weaving 2",
+            "wea 3": "Weaving 3",
+            "Sheet1": "-- Bỏ qua --"
+        },
+        "Month": "date_month",
+        "Date": "date_day",
+        "호수\nSố máy ": "ten_may",
+        "제품명\nTên hàng": "item_id",
+        "COLOR": "COLOR",
+        "P BEAM YARN": "P BEAM YARN",
+        "RPM": "RPM",
+        "A반 제직중량\n(Kg)\nKL dệt ca A": "A반 제직중량\n(Kg)\nKL dệt ca A",
+        "Unnamed: 8": "-- Bỏ qua --",
+        "B반 \n제직중량\n(Kg)\nKL dệt ca B": "B반 \n제직중량\n(Kg)\nKL dệt ca B",
+        "표준\n중량\n( KG)\n": "표준\n중량\n( KG)",
+        "TOTAL\n(Kg)": "quantity_kg",
+        "A 반\n효율 (%)\nHS ca A": "A 반\n효율 (%)\nHS ca A",
+        "Unnamed: 13": "-- Bỏ qua --",
+        "B 반\n효율 (%)\nHS ca B": "B 반\n효율 (%)\nHS ca B",
+        "효율 (%)\nHiệu suất \n2 ca": "효율 (%)\nHiệu suất \n2 ca",
+        "비고\nGhi chú": "비고\nGhi chú",
+        "1 PCS ": "-- Bỏ qua --",
+        "Kind of dyeing": "-- Bỏ qua --",
+        "PHÂN LOẠI": "phân loại",
+        "DTY": "-- Bỏ qua --",
+        "FILAMENT": "phân loại"
+    },
+    "xuong det": {
+        "__SHEET_ZONE_MAP__": {
+            "wea 1": "Weaving 1",
+            "wea 2": "Weaving 2",
+            "wea 3": "Weaving 3",
+            "Sheet1": "-- Bỏ qua --"
+        },
+        "Month": "date_month",
+        "Date": "date_day",
+        "호수\nSố máy ": "ten_may",
+        "제품명\nTên hàng": "item_id",
+        "COLOR": "COLOR",
+        "P BEAM YARN": "P BEAM YARN",
+        "RPM": "RPM",
+        "A반 제직중량\n(Kg)\nKL dệt ca A": "A반 제직중량\n(Kg)\nKL dệt ca A",
+        "Unnamed: 8": "-- Bỏ qua --",
+        "B반 \n제직중량\n(Kg)\nKL dệt ca B": "B반 \n제직중량\n(Kg)\nKL dệt ca B",
+        "표준\n중량\n( KG)\n": "표준\n중량\n( KG)",
+        "TOTAL\n(Kg)": "quantity_kg",
+        "A 반\n효율 (%)\nHS ca A": "A 반\n효율 (%)\nHS ca A",
+        "Unnamed: 13": "-- Bỏ qua --",
+        "B 반\n효율 (%)\nHS ca B": "B 반\n효율 (%)\nHS ca B",
+        "효율 (%)\nHiệu suất \n2 ca": "효율 (%)\nHiệu suất \n2 ca",
+        "비고\nGhi chú": "비고\nGhi chú",
+        "1 PCS ": "-- Bỏ qua --",
+        "Kind of dyeing": "-- Bỏ qua --",
+        "PHÂN LOẠI": "phân loại",
+        "DTY": "-- Bỏ qua --",
+        "FILAMENT": "phân loại"
+    }
+}

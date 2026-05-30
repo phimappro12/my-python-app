@@ -1,0 +1,14 @@
+{
+    "Kho_Soi_Tong_Mau_1": {
+        "Ngày tháng": "date",
+        "Mã Sợi": "item_id",
+        "Số Lượng": "quantity",
+        "ĐVT": "unit"
+    },
+    "Kho_Soi_Tong_Mau_2_TiengAnh": {
+        "Date": "date",
+        "Item Code": "item_id",
+        "Qty": "quantity",
+        "Unit": "unit"
+    }
+}

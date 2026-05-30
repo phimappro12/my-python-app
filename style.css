@@ -1,0 +1,554 @@
+/* ============================================================
+   TEXFLOW — Professional Dashboard Theme
+   Inspired by ArchitectUI: Clean, Corporate, High-Density
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Root Variables ────────────────────────────────────────── */
+:root {
+    --primary:       #3B5BDB;   /* Indigo blue — corporate anchor */
+    --primary-light: #4C6EF5;
+    --primary-soft:  #EDF2FF;
+    --accent:        #0CA678;   /* Teal green — positive/active */
+    --accent-soft:   #E6FCF5;
+    --warn:          #F59F00;
+    --danger:        #FA5252;
+    --bg-page:       #F0F2F5;
+    --bg-card:       #FFFFFF;
+    --bg-sidebar:    #1C1F2E;   /* Deep navy sidebar */
+    --bg-sidebar-hover: #2A2D3E;
+    --text-primary:  #1A1B2E;
+    --text-secondary:#525866;
+    --text-muted:    #8B92A5;
+    --border:        #E4E7EE;
+    --border-focus:  #3B5BDB;
+    --shadow-sm:     0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md:     0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+    --shadow-lg:     0 10px 30px rgba(0,0,0,0.1),  0 4px 8px rgba(0,0,0,0.06);
+    --radius:        10px;
+    --radius-sm:     6px;
+    --radius-lg:     14px;
+    --font:          'DM Sans', system-ui, sans-serif;
+    --font-mono:     'DM Mono', monospace;
+    --transition:    0.18s ease;
+}
+
+/* ── Base Reset ────────────────────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: var(--font) !important;
+    -webkit-font-smoothing: antialiased;
+    color: var(--text-primary);
+}
+
+.stApp {
+    background: var(--bg-page) !important;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: var(--bg-sidebar) !important;
+    border-right: none !important;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.15) !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #C8CEDE !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.3px !important;
+}
+
+/* Sidebar logo area */
+[data-testid="stSidebar"] .stMarkdown:first-child h1,
+[data-testid="stSidebar"] .stMarkdown:first-child p {
+    color: #FFFFFF !important;
+}
+
+/* Sidebar nav items */
+[data-testid="stSidebar"] [data-testid="stRadio"] label {
+    background: transparent !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 8px 12px !important;
+    margin: 2px 0 !important;
+    transition: var(--transition) !important;
+    color: #A8B0C8 !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
+    background: var(--bg-sidebar-hover) !important;
+    color: #FFFFFF !important;
+}
+
+/* Active sidebar item */
+[data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"],
+[data-testid="stSidebar"] [data-testid="stRadio"] input:checked + label {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(59,91,219,0.35) !important;
+}
+
+/* Sidebar divider */
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255,255,255,0.07) !important;
+    margin: 12px 0 !important;
+}
+
+/* Sidebar caption/subtext */
+[data-testid="stSidebar"] .stMarkdown p {
+    color: #7B8399 !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    font-weight: 600 !important;
+}
+
+/* ── Main Content Area ─────────────────────────────────────── */
+.main .block-container {
+    padding: 1.5rem 2rem 2rem !important;
+    max-width: 100% !important;
+}
+
+/* ── Page Title ────────────────────────────────────────────── */
+h1 {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.4px !important;
+    padding-bottom: 14px !important;
+    border-bottom: 2px solid var(--border) !important;
+    margin-bottom: 20px !important;
+}
+
+h2 {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.2px !important;
+}
+
+h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--text-secondary) !important;
+}
+
+/* ── Cards / Containers ────────────────────────────────────── */
+[data-testid="stVerticalBlockBorderWrapper"],
+div[class*="stContainer"] > div {
+    background: var(--bg-card) !important;
+    border-radius: var(--radius) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: var(--transition) !important;
+}
+
+/* ── Metrics ───────────────────────────────────────────────── */
+[data-testid="stMetric"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    padding: 16px 20px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: var(--transition) !important;
+}
+
+[data-testid="stMetric"]:hover {
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-1px) !important;
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--text-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.5px !important;
+    font-variant-numeric: tabular-nums !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.stButton > button {
+    font-family: var(--font) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    padding: 8px 16px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: all var(--transition) !important;
+    letter-spacing: 0.1px !important;
+}
+
+.stButton > button:hover {
+    background: var(--bg-page) !important;
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Primary button */
+.stButton > button[kind="primary"],
+.stButton > button[data-testid="baseButton-primary"] {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(59,91,219,0.3) !important;
+}
+
+.stButton > button[kind="primary"]:hover,
+.stButton > button[data-testid="baseButton-primary"]:hover {
+    background: var(--primary-light) !important;
+    border-color: var(--primary-light) !important;
+    box-shadow: 0 4px 14px rgba(59,91,219,0.4) !important;
+    color: #FFFFFF !important;
+}
+
+/* ── Inputs ────────────────────────────────────────────────── */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stTextArea > div > textarea {
+    font-family: var(--font) !important;
+    font-size: 13.5px !important;
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    padding: 9px 12px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: all var(--transition) !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(59,91,219,0.12) !important;
+    outline: none !important;
+}
+
+.stTextInput label, .stNumberInput label, .stTextArea label,
+.stSelectbox label, .stMultiSelect label {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--text-secondary) !important;
+    letter-spacing: 0.2px !important;
+    margin-bottom: 4px !important;
+}
+
+/* ── Selectbox ─────────────────────────────────────────────── */
+[data-testid="stSelectbox"] > div > div {
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--bg-card) !important;
+    box-shadow: var(--shadow-sm) !important;
+    font-size: 13.5px !important;
+    transition: all var(--transition) !important;
+}
+
+[data-testid="stSelectbox"] > div > div:hover {
+    border-color: var(--primary) !important;
+}
+
+/* ── Multiselect ───────────────────────────────────────────── */
+[data-testid="stMultiSelect"] > div {
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--bg-card) !important;
+}
+
+/* Tag chips in multiselect */
+[data-testid="stMultiSelect"] span[data-baseweb="tag"] {
+    background: var(--primary-soft) !important;
+    border: 1px solid rgba(59,91,219,0.2) !important;
+    color: var(--primary) !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+/* ── Expanders ─────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow-sm) !important;
+    margin-bottom: 8px !important;
+    overflow: hidden !important;
+    transition: var(--transition) !important;
+}
+
+[data-testid="stExpander"]:hover {
+    border-color: #CBD0DC !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+[data-testid="stExpander"] summary {
+    background: var(--bg-card) !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
+    color: var(--text-primary) !important;
+    padding: 14px 16px !important;
+    letter-spacing: -0.1px !important;
+}
+
+[data-testid="stExpander"] summary:hover {
+    background: var(--primary-soft) !important;
+    color: var(--primary) !important;
+}
+
+/* ── DataFrames / Tables ───────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border-radius: var(--radius) !important;
+    border: 1px solid var(--border) !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+[data-testid="stDataFrame"] th {
+    background: #F8F9FC !important;
+    color: var(--text-muted) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 2px solid var(--border) !important;
+    padding: 10px 12px !important;
+}
+
+[data-testid="stDataFrame"] td {
+    font-size: 13px !important;
+    color: var(--text-primary) !important;
+    padding: 9px 12px !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+[data-testid="stDataFrame"] tr:hover td {
+    background: var(--primary-soft) !important;
+}
+
+/* ── Progress Bar ──────────────────────────────────────────── */
+[data-testid="stProgress"] > div > div > div {
+    background: var(--border) !important;
+    border-radius: 100px !important;
+    height: 6px !important;
+    overflow: hidden !important;
+}
+
+[data-testid="stProgress"] > div > div > div > div {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light)) !important;
+    border-radius: 100px !important;
+    transition: width 0.4s ease !important;
+}
+
+/* ── Alerts / Info / Success / Warning / Error ─────────────── */
+[data-testid="stAlert"],
+.stSuccess, .stInfo, .stWarning, .stError {
+    border-radius: var(--radius-sm) !important;
+    border-width: 0 0 0 4px !important;
+    font-size: 13.5px !important;
+    padding: 12px 16px !important;
+    font-weight: 500 !important;
+}
+
+.stSuccess { border-color: var(--accent) !important; background: var(--accent-soft) !important; }
+.stInfo    { border-color: var(--primary) !important; background: var(--primary-soft) !important; }
+.stWarning { border-color: var(--warn) !important; background: #FFF8E1 !important; }
+.stError   { border-color: var(--danger) !important; background: #FFF1F0 !important; }
+
+/* ── File Uploader ─────────────────────────────────────────── */
+[data-testid="stFileUploaderDropzone"] {
+    border: 2px dashed var(--border) !important;
+    border-radius: var(--radius) !important;
+    background: var(--bg-page) !important;
+    transition: all var(--transition) !important;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--primary) !important;
+    background: var(--primary-soft) !important;
+}
+
+/* ── Tab widget ────────────────────────────────────────────── */
+[data-testid="stTabs"] [role="tablist"] {
+    border-bottom: 2px solid var(--border) !important;
+    gap: 0 !important;
+}
+
+[data-testid="stTabs"] [role="tab"] {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: var(--text-muted) !important;
+    padding: 10px 18px !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid transparent !important;
+    margin-bottom: -2px !important;
+    transition: all var(--transition) !important;
+}
+
+[data-testid="stTabs"] [role="tab"]:hover {
+    color: var(--primary) !important;
+    background: var(--primary-soft) !important;
+}
+
+[data-testid="stTabs"] [role="tab"][aria-selected="true"] {
+    color: var(--primary) !important;
+    border-bottom-color: var(--primary) !important;
+    background: transparent !important;
+}
+
+/* ── Spinner / Loading ─────────────────────────────────────── */
+[data-testid="stSpinner"] p {
+    font-size: 13px !important;
+    color: var(--text-muted) !important;
+    font-weight: 500 !important;
+}
+
+/* ── Caption / Small text ──────────────────────────────────── */
+.stCaption, [data-testid="stCaptionContainer"] {
+    color: var(--text-muted) !important;
+    font-size: 12px !important;
+}
+
+/* ── Dividers ──────────────────────────────────────────────── */
+hr {
+    border: none !important;
+    border-top: 1px solid var(--border) !important;
+    margin: 16px 0 !important;
+}
+
+/* ── Chat Messages ─────────────────────────────────────────── */
+[data-testid="stChatMessage"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    padding: 14px 16px !important;
+    margin-bottom: 8px !important;
+    box-shadow: var(--shadow-sm) !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+[data-testid="stChatMessage"][data-testid*="user"] {
+    background: var(--primary-soft) !important;
+    border-color: rgba(59,91,219,0.2) !important;
+}
+
+/* Chat input */
+[data-testid="stChatInput"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow-md) !important;
+    padding: 8px 12px !important;
+}
+
+/* ── Sidebar input (model name box) ────────────────────────── */
+[data-testid="stSidebar"] .stTextInput > div > div > input {
+    background: rgba(255,255,255,0.07) !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    color: #FFFFFF !important;
+    font-family: var(--font-mono) !important;
+    font-size: 12.5px !important;
+}
+
+[data-testid="stSidebar"] .stTextInput > div > div > input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(59,91,219,0.25) !important;
+}
+
+/* ── Process Flow Cards (Digital Twin) ─────────────────────── */
+.process-card {
+    background: linear-gradient(135deg, #1E2235 0%, #151829 100%);
+    border: 1px solid rgba(59,91,219,0.35);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    opacity: 0;
+    transition: opacity 0.22s;
+}
+
+.process-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(59,91,219,0.6);
+    box-shadow: 0 8px 30px rgba(59,91,219,0.2), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.process-card:hover::before { opacity: 1; }
+
+/* Active/selected process card */
+.process-card.active {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(59,91,219,0.25), 0 8px 25px rgba(59,91,219,0.2);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-page); }
+::-webkit-scrollbar-thumb { background: #CBD0DC; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #A0A9BE; }
+
+/* ── Number inputs ─────────────────────────────────────────── */
+.stNumberInput button {
+    background: var(--bg-page) !important;
+    border-color: var(--border) !important;
+    color: var(--text-secondary) !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 4px !important;
+}
+
+/* ── Badge / Tag helpers ───────────────────────────────────── */
+.badge-primary { background: var(--primary-soft); color: var(--primary); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-success { background: var(--accent-soft); color: var(--accent); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-warn    { background: #FFF8E1; color: #B45309; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+
+/* ── Status light dots ─────────────────────────────────────── */
+.dot-green { width:8px; height:8px; background:var(--accent); border-radius:50%; display:inline-block; box-shadow: 0 0 6px var(--accent); }
+.dot-blue  { width:8px; height:8px; background:var(--primary); border-radius:50%; display:inline-block; }
+.dot-red   { width:8px; height:8px; background:var(--danger); border-radius:50%; display:inline-block; }
+
+/* ── Toast / rerun spinner overlay ────────────────────────────*/
+.stToast {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-radius: var(--radius) !important;
+    font-size: 13.5px !important;
+}
+
+/* ── Column gap fix ────────────────────────────────────────── */
+[data-testid="column"] { padding: 0 6px !important; }
